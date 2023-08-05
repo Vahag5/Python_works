@@ -1,0 +1,39 @@
+def filter(function, iterable):
+    if not hasattr(iterable, "__iter__"):
+        raise ValueError("NO!")
+    if function == None:
+        for el in iterable:
+            if el:
+                yield el
+    else:
+        for el in iterable:
+            if function(el):
+                yield eldef substr(string):
+    res = str()
+    for i in range(len(string)):
+        tmp = str()
+        for j in range(1, len(string)):
+            if string[j] in tmp:
+                tmp += string[j]
+            else:
+                if len(tmp) > len(res):
+                    res = tmp
+                tmp = string[j]    return resdef split(string, sep = ""):
+    res = list()
+    tmp = str()
+    for i in range(len(string)):
+        if string[i] != sep:
+            tmp += string[i]
+        else:
+            res.append(tmp)
+            tmp = ""    return resdef strip(string):
+    i = 0
+    j = len(string) - 1
+    while string[i] == " " or string[j] == " ":
+        if string[i] == " ":
+            i += 1
+        if string[j] == " ":
+            j -= 1
+    return string[i : j+1]def filter(string, old, new):
+    pass
+    #implement
